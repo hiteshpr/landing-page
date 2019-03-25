@@ -14,17 +14,25 @@ import { HomeComponent } from './home/home.component';
 import { LoadingPageModule, MaterialBarModule } from 'angular-loading-page';
 
 
+import { BoxSmallRoutingModule } from './+boxs/box-small/box-small-routing.module';
+import { BoxSmallComponent } from './+boxs/box-small/box-small.component';
+
+import { BoxModule, BoxSmallModule as MkBoxSmallModule  } from 'angular-admin-lte';
+
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     LayoutModule.forRoot(adminLteConf),
-    LoadingPageModule, MaterialBarModule
+    LoadingPageModule, MaterialBarModule,
+    BoxSmallRoutingModule,
+    BoxModule, MkBoxSmallModule
   ],
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    BoxSmallComponent
   ],
   bootstrap: [AppComponent]
 })

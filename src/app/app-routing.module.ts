@@ -6,9 +6,6 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
   path: '',
-  data: {
-      title: 'Get Started'
-  },
   children: [
     {
       path: '',
